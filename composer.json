@@ -1,9 +1,9 @@
 {
     "name": "gpibarra/laravel-errors-views",
     "type": "library",
-    "description": "Laravel AdminLTE package",
+    "description": "Laravel Error Views",
     "keywords": [
-        "adminLTE","laravel","panel"
+        "laravel","errors","http"
     ],
     "homepage": "https://github.com/gpibarra/laravel-errors-views",
     "license": "MIT",
@@ -21,5 +21,5 @@
     },
     "scripts": {
         "test": "phpunit"
-    },
+    }
 }
