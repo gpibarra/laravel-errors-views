@@ -19,7 +19,19 @@
     "require-dev": {
         "phpunit/phpunit": "~6.0"
     },
+    "autoload": {
+        "psr-4": {
+            "gpibarra\\LaravelErrorsViews\\": "src"
+        }
+    },
     "scripts": {
         "test": "phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "gpibarra\\LaravelErrorsViews\\LaravelErrorsViewsServiceProvider"
+            ]
+        }
     }
 }

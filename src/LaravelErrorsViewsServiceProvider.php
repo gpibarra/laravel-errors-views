@@ -2,9 +2,7 @@
 
 namespace gpibarra\LaravelErrorsViews;
 
-use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
-use Route;
 
 class LaravelErrorsViewsServiceProvider extends ServiceProvider
 {
@@ -16,11 +14,11 @@ class LaravelErrorsViewsServiceProvider extends ServiceProvider
     protected $defer = false;
 
     /**
-     * Perform post-registration booting of services.
+     * Bootstrap services.
      *
      * @return void
      */
-    public function boot(\Illuminate\Routing\Router $router)
+    public function boot()
     {
         // LOAD THE VIEWS
         // - first the published views (in case they have any changes)
@@ -30,16 +28,21 @@ class LaravelErrorsViewsServiceProvider extends ServiceProvider
 
         $this->loadTranslationsFrom(realpath(__DIR__.'/resources/lang'), 'errors');
 
-        $this->publishFiles();
-    }
-
-    public function publishFiles()
-    {
         // publish lang files
         $this->publishes([__DIR__.'/resources/lang' => resource_path('lang')], 'lang');
 
         // publish error views
         $this->publishes([__DIR__.'/resources/views' => resource_path('views/errors')], 'errors');
 
+    }
+
+    /**
+     * Register services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
     }
 }
