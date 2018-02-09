@@ -1,0 +1,25 @@
+{
+    "name": "gpibarra/laravel-errors-views",
+    "type": "library",
+    "description": "Laravel AdminLTE package",
+    "keywords": [
+        "adminLTE","laravel","panel"
+    ],
+    "homepage": "https://github.com/gpibarra/laravel-errors-views",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gerardo Ibarra",
+            "email": "ibarragp@gmail.com"
+        }
+    ],
+    "require": {
+        "laravel/framework": "5.5.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+}
